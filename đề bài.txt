@@ -1,0 +1,55 @@
+ĐÁNH GIÁ CHẤT LƯỢNG KỸ NĂNG CƠ BẢN
+MODULE 03 – JAVA CORE – HACKATHON 05
+THỜI GIAN: 120 phút
+*******************
+Yêu cầu:
+➢ Đảm bảo clean code, naming convention trong việc đặt tên các biến, phương thức,
+lớp
+➢ Tạo project folder theo hướng dẫn sau:
+• Tạo folder HN_JV221024_BS_[StudentName] chứa toàn bộ file mã nguồn
+• Ví dụ: HN_ JV221024_BS_NguyenVanA
+➢ Sau khi hoàn thành project, đẩy code lên github và nộp link cho người phụ trách
+➢ Công nghệ sử dụng: Java
+➢ IDE: IntelliJ
+Thực hành:
+Xây dựng ứng dụng Java Console có tên Exam_Basic:
+1. Xây dựng interface IProduct trong package ra.bussiness gồm các thông tin: [05 điểm]
+➢ void inputData()
+➢ void displayData()
+2. Xây dựng lớp Product trong package ra.bussinessImp kế thừa IProduct gồm các thông tin
+sau: [15 điểm]
+➢ Các thuộc tính:
+▪ productid – mã sản phẩm – int
+▪ productName – tên sản phẩm – String
+▪ title – tiêu đề sản phẩm – String
+▪ descriptions – mô tả sản phẩm – String
+▪ importPrice – giá nhập – float
+▪ exportPrice – giá xuất – float
+▪ interest – lợi nhuận – float
+▪ productStatus – trạng thái – Boolean
+➢ Các constructor
+➢ Các phương thức:
+▪ Các phương thức getter/setter
+▪ Triển khai phương thức inputData():
+• Nhập thông tin sản phẩm từ bàn phím (trừ interest)
+• Thực hiện tính interest = exportPrice – importPrice
+▪ Triển khai phương thức displayData() cho phép hiển thị tất cả thông tin sản phẩm
+3. Xây dựng lớp main có tên ProductManagement trong package ra.run thực hiện các chức
+năng sau:
+****************JAVA-HACKATHON-05-BASIC-MENU***************
+1. Nhập số sản phẩm và nhập thông tin sản phẩm [15 điểm]
+2. Hiển thị thông tin các sản phẩm [15 điểm]
+3. Sắp xếp sản phẩm theo lợi nhuận tăng dần [15 điểm]
+4. Xóa sản phẩm theo mã sản phẩm [10 điểm]
+5. Tìm kiếm sản phẩm theo tên sản phẩm [10 điểm]
+6. Thay đổi trạng thái của sản phẩm theo mã sản phẩm [10 điểm]
+7. Thoát [05 điểm]
+Chọn 1: Nhập số sản phẩm (n) cần nhập thông tin từ bàn phím và thực hiện nhập thông
+tin cho n sản phẩm đó
+Chọn 2: Hiển thiện thông tin sản phẩm cho tất cả sản phẩm đang lưu trữ
+Chọn 3: Sử dụng Comparable để cài đặt sắp xếp tăng dần cho các sản phẩm đang lưu trữ
+Chọn 4: Nhập mã sản phẩm cần xóa từ bàn phím, thực hiện xóa sản phẩm trong danh sách
+Chọn 5: Nhập tên sản phẩm từ bàn phím, thực hiện tìm và in ra sản phẩm có tên phù hợp
+Chọn 6: Nhập vào mã sản phẩm, thay đổi trạng thái sản phẩm true→false, false→true
+Chọn 7: Thoát khỏi chương trình
+Lưu ý: Chỉ tính điểm khi chức năng phải thực hiện đúng theo yêu cầu
