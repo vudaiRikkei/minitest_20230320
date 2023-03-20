@@ -5,7 +5,7 @@ import ra.run.Main;
 
 import java.util.Scanner;
 
-public class Product implements IProduct {
+public class Product implements IProduct, Comparable<Product> {
     private int productid;
 
     private String productName;
@@ -145,5 +145,9 @@ public class Product implements IProduct {
                 ", interest=" + interest +
                 ", productStatus=" + productStatus +
                 '}';
+    }
+    @Override
+    public int compareTo(Product product) {
+        return (int) (this.interest-product.interest);
     }
 }

@@ -3,6 +3,7 @@ package ra.run;
 import ra.bussinessImp.Product;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -30,7 +31,8 @@ public class Main {
                     break;
                 case 2: if (checkProductQuantity()){product.displayData();}
                     break;
-                case 3: sortProductByInterestASC();
+                case 3:
+                    Collections.sort(productList);
                     break;
                 case 4: deleteById();
                     break;
@@ -38,7 +40,9 @@ public class Main {
                     break;
                 case 6: changeProductStatus();
                     break;
-                case 7: System.exit(0);
+                case 7:
+                    choice = 7;
+                    System.exit(0);
             }
         } while (choice != 7);
     }
@@ -51,21 +55,21 @@ public class Main {
         }
     }
 
-    static void sortProductByInterestASC(){ //thuật toán sắp xếp theo lợi nhuận sản phẩm
-        if (checkProductQuantity()) {
-            for (int i = 0; i < productList.size(); i++) {
-                int minIdx = i;
-                for (int j = i + 1; j < productList.size(); j++) {
-                    if (productList.get(i).getInterest() < productList.get(minIdx).getInterest()) {
-                        minIdx = j;
-                    }
-                }
-                Product temp = productList.get(minIdx);
-                productList.set(minIdx, productList.get(i));
-                productList.set(i, temp);
-            }
-        }
-    }
+//    static void sortProductByInterestASC(){ //thuật toán sắp xếp theo lợi nhuận sản phẩm
+//        if (checkProductQuantity()) {
+//            for (int i = 0; i < productList.size(); i++) {
+//                int minIdx = i;
+//                for (int j = i + 1; j < productList.size(); j++) {
+//                    if (productList.get(i).getInterest() < productList.get(minIdx).getInterest()) {
+//                        minIdx = j;
+//                    }
+//                }
+//                Product temp = productList.get(minIdx);
+//                productList.set(minIdx, productList.get(i));
+//                productList.set(i, temp);
+//            }
+//        }
+//    }
 
     public static void deleteById(){ //hàm xóa
         if (checkProductQuantity()) {
